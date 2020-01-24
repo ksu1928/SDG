@@ -6,16 +6,16 @@ data.addText('hello world');
 console.log(data.output());
 
 data = new kakaoEmbed();
-data.addImage('http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg','보물상자입니다.');
+data.addImage('./duckling.jpg','오리꽉꽉');
 
 console.log(data.output());
 
 data = new kakaoEmbed();
 data
 .addBasicCard()
-.setCardTitle('보물상자')
-.setCardDescription('보물상자 안에는 뭐가 있을까')
-.setCardThumbnail('http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg')
+.setCardTitle('오리꽉꽉')
+.setCardDescription('무엇을 씌워줄까요?')
+.setCardThumbnail('./duckling.jpg')
 .addCardButton('열어보기', { action: 'message', messageText: '짜잔 우리가 찾던 보물입니다.' })
 .addCardButton('구경하기', { action: 'webLink', webLinkUrl: 'https://e.kakao.com/t/hello-ryan' })
 
