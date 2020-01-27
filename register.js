@@ -42,7 +42,7 @@ apiRouter.post('/register', function(req, res) {
   //if(intent == "register"){
     var context = req.body.action.params['context'];
     u_barkey = '700003';
-    bar_url = 'https://imgc.allpostersimages.com/img/print/u-g-Q10O35P0.jpg?w=900&h=900&p=0';
+    bar_url = 'https://imgc.allpostersimages.com/img/print/u-g-Q10O35P0.jpg';
 /*    var bar_url =  'http://www.mscollege.or.kr/kakao/barcode/barcode_image/barcode.php?id=' + u_barkey;
 */
     usrmsg = u_kyogu + '교구 ' + u_team + '팀 ' + u_group + '그룹 ' + u_name + '님의 바코드입니다';
@@ -50,8 +50,8 @@ apiRouter.post('/register', function(req, res) {
     let data = new kakaEmbed();
     data.addBasicCard()
         .setCardTitle('모바일 바코드')
-        .setCardDescription(usrmsg)
-     .setCardThumbnail('https://imgc.allpostersimages.com/img/print/u-g-Q10O35P0.jpg')
+        .setCardDescription('YES')
+        .setCardThumbnail('https://imgc.allpostersimages.com/img/print/u-g-Q10O35P0.jpg')
         .addCardButton('크게보기', { action: 'weblink', webLinkUrl: bar_url})
     result = data.output();
   
