@@ -27,9 +27,9 @@ apiRouter.post('/register', function(req, res) {
   var result = null;
   var tmp = "";
 
-  let data = new kakaoEmbed();
-  data.addText("이해하지 못했습니다.");
-  result = data.output();
+//  let data = new kakaoEmbed();
+//  data.addText("이해하지 못했습니다.");
+//  result = data.output();
 
   // intent : 하고자 하는 의도
   // 1) what : 개념 설명
