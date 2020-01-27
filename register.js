@@ -25,7 +25,9 @@ apiRouter.post('/register', function(req, res) {
   var u_gisu = req.body.action.params['u_gisu'];
   var u_name = req.body.action.params['u_name'];
   var result = null;
-  var tmp = "";
+  var bar_url = "";
+  var usrmsg = "";
+  
 
 //  let data = new kakaoEmbed();
 //  data.addText("이해하지 못했습니다.");
