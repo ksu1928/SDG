@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // question_payment : 결제 관련된 문의사항 처리
 apiRouter.post('/register', function(req, res) {
   // 카카오 오픈빌더 question스킬에 등록된 'contexts' 파라미터를 post방식으로 가져옴.
-  var intent = req.body.action.params['intent'];
+  //var intent = req.body.action.params['intent'];
   var u_key = req.body.userRequest.user.id;
   var u_kyogu = req.body.action.params['u_kyogu'];
   var u_team = req.body.action.params['u_team'];
@@ -37,7 +37,7 @@ apiRouter.post('/register', function(req, res) {
   // 3) how : 어떻게 해야 하는 지에 대한 설명
   // 4) etc : 기타 등등
 
-  if(intent == "register"){
+  //if(intent == "register"){
     var context = req.body.action.params['context'];
     u_barkey = '700003';
     bar_url = 'https://imgc.allpostersimages.com/img/print/u-g-Q10O35P0.jpg?w=900&h=900&p=0';
@@ -53,7 +53,7 @@ apiRouter.post('/register', function(req, res) {
         .addCardButton('크게보기', { action: 'weblink', webLinkUrl: bar_url})
     result = data.output();
   
-  }
+//  }
 
   //console.log(result);
 
