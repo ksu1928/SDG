@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 // 실제 스킬이 들어가는 부분.
 // question_payment : 결제 관련된 문의사항 처리
-apiRouter.post('/register', function(req, res) {
+apiRouter.post('/', function(req, res) {
   // 카카오 오픈빌더 question스킬에 등록된 'contexts' 파라미터를 post방식으로 가져옴.
   //var intent = req.body.action.params['intent'];
   var u_key = req.body.userRequest.user.id;
@@ -45,7 +45,8 @@ apiRouter.post('/register', function(req, res) {
     bar_url = 'https://imgc.allpostersimages.com/img/print/u-g-Q10O35P0.jpg';
 /*    var bar_url =  'http://www.mscollege.or.kr/kakao/barcode/barcode_image/barcode.php?id=' + u_barkey;
 */
-    usrmsg = u_kyogu + '교구 ' + u_team + '팀 ' + u_group + '그룹 ' + u_name + '님의 바코드입니다';
+//    usrmsg = u_kyogu + '교구 ' + u_team + '팀 ' + u_group + '그룹 ' + u_name + '님의 바코드입니다';
+    usrmsg = usrmsg.concat(u_kyogu,'교구 ',u_team,'팀 ',u_group,'그룹 ',u_name,'님의 바코드입니다');  
     
     let data = new kakaEmbed();
     data.addBasicCard()
